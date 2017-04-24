@@ -1,0 +1,62 @@
+(export (version D)
+  (design
+    (source C:\projects\kicad\ufl-to-SMA\ufl2sma.sch)
+    (date "4/23/2017 7:26:10 PM")
+    (tool "Eeschema 4.0.6")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source ufl2sma.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref J1)
+      (value "U.FL-R-SMT-1(01)")
+      (footprint U.FL-SMT)
+      (fields
+        (field (name Manufacturer) Hirose))
+      (libsource (lib custom) (part "U.FL-R-SMT(10)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58FCC6CC))
+    (comp (ref J2)
+      (value 0732511150)
+      (footprint MOLEX-0732511150)
+      (fields
+        (field (name Manufacturer) Molex))
+      (libsource (lib custom) (part 0732511150))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58FCC769)))
+  (libparts
+    (libpart (lib custom) (part 0732511150)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) 0732511150))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type power_out))
+        (pin (num 3) (name ~) (type power_out))))
+    (libpart (lib custom) (part "U.FL-R-SMT(10)")
+      (fields
+        (field (name Reference) J)
+        (field (name Value) "U.FL-R-SMT(10)"))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type power_out))
+        (pin (num 3) (name ~) (type power_out)))))
+  (libraries
+    (library (logical custom)
+      (uri C:\projects\kicad\libraries\custom.lib)))
+  (nets
+    (net (code 1) (name "Net-(J1-Pad1)")
+      (node (ref J2) (pin 1))
+      (node (ref J1) (pin 1)))
+    (net (code 2) (name GND)
+      (node (ref J1) (pin 2))
+      (node (ref J1) (pin 3))
+      (node (ref J2) (pin 2))
+      (node (ref J2) (pin 3)))))

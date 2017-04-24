@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name RF-CON)(type KiCad)(uri C:/projects/kicad/libraries/RF-CON.pretty)(options "")(descr ""))
+)
